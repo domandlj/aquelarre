@@ -3,7 +3,7 @@
 [![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Aquelarre.
+# Aquelarre
 
 Aquelarre is a DSL for making minimalistic web apps. It's more minimalistic 
 than similiar software beacuse:
@@ -13,7 +13,7 @@ than similiar software beacuse:
 parameters are passed as script parameters and it's body JSON payload as stdin.
 * Responses are in JSON format only, must be the stdout of a script.
 
-## Installing.
+## Installing
 1. Clone the repo and go to it: 
 ```
 git clone https://github.com/domandlj/aquelarre.git 
@@ -32,7 +32,7 @@ and you can now remove the github repositorie.
 
 4. You can run again the install script to remove Aquelarre. 
 
-## Syntax example.
+## Syntax example
 script.re
 ```ruby
 exists_worker = ./is_is_worker.py
@@ -57,6 +57,6 @@ post
 	not_exists_worker => create_worker, 201
 end
 ```
-## License.
-MIT license (© 2021 Juan Salvador Domandl).
+## License
+MIT License (© 2021 Juan Salvador Domandl).
 

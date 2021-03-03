@@ -20,7 +20,7 @@ sudo ./install.sh
 ``` 
 
 3. And that's it. You can now run your own aquelare .re scripts like
-```posh
+```ruby
 aquelarre script.re
 ```
 

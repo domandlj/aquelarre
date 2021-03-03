@@ -57,4 +57,6 @@ post
 	not_exists_worker => create_worker, 201
 end
 ```
+## License.
+MIT license (© 2021 Juan Salvador Domandl).
 

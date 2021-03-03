@@ -23,7 +23,7 @@ sudo ./install.sh
 ```
 aquelarre script.re
 ```
-and remove the directory. 
+and you can now remove the github repositorie. 
 
 4. You can run again the install script to remove Aquelarre. 
 

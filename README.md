@@ -25,6 +25,7 @@ aquelarre script.re
 ```
 
 ## Syntax example.
+script.re
 ```ruby
 exists_worker = ./is_is_worker.py
 get_worker = ./get_worker.py

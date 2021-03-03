@@ -10,17 +10,17 @@ parameters are passed as script parameters and it's body JSON payload as stdin.
 
 ## Installing.
 1. Clone the repo and go to it: 
-```haskell
+```python
 $ git clone https://github.com/domandlj/aquelarre.git 
 ```
 2. Run the installer (only works with MAC OS, Linux and Termux.).
-```haskell
+```python
 $ chmod +x install.sh
 $ sudo ./install.sh
 ``` 
 
 3. And that's it. You can now run your own aquelare .re scripts like
-```haskell
+```python
 $ aquelarre script.re
 ```
 

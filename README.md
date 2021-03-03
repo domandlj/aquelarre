@@ -23,6 +23,7 @@ sudo ./install.sh
 ```
 aquelarre script.re
 ```
+4. You can run again the install script to remove Aquelarre. 
 
 ## Syntax example.
 script.re

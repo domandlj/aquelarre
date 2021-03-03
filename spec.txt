@@ -1,0 +1,20 @@
+# Specification DSL in BNF extended.
+
+
+<code> ::= <script-declaration> <code>*
+		|  <comment> <code>*
+		|  <fun> <code>*
+
+<script-declaration> ::= <script-name> = ./<string>
+<script-name> ::= <string>
+
+<comment> ::= #<string>
+
+<cond> ::= <script-name> => <script-name> , <status>	
+<fun> ::= <method> <url>: <comment>* <cond>* <comment>* end
+
+<status> ::= <int>
+
+<method> ::= get | post | put | delete
+
+<url> ::= <string>

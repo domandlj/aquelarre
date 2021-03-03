@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+from aquelarre_syntax import parse_script_from_io
+from aquelarre_server import run_server
+import sys
+import os
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        os.system("echo running...")
+        code_path = sys.argv[1]
+        code = parse_script_from_io(code_path)
+        run_server(code)
+    else:
+        raise Exception('No script to run!')

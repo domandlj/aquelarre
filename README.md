@@ -10,11 +10,11 @@ parameters are passed as script parameters and it's body JSON payload as stdin.
 
 ## Installing.
 1. Clone the repo and go to it: 
-```shellscript
+```ruby
 git clone https://github.com/domandlj/aquelarre.git 
 ```
 2. Run the installer (only works with MAC OS, Linux and Termux.).
-```posh
+```ruby
 chmod +x install.sh
 sudo ./install.sh
 ``` 

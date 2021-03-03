@@ -19,10 +19,12 @@ chmod +x install.sh
 sudo ./install.sh
 ``` 
 
-3. And that's it. You can now run your own aquelare .re scripts like
+3. And that's it, you can now run your own aquelare .re scripts like
 ```
 aquelarre script.re
 ```
+and remove the directory. 
+
 4. You can run again the install script to remove Aquelarre. 
 
 ## Syntax example.

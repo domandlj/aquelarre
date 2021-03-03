@@ -11,21 +11,21 @@ parameters are passed as script parameters and it's body JSON payload as stdin.
 ## Installing.
 1. Clone the repo and go to it: 
 ```bash
-git clone https://github.com/domandlj/aquelarre.git 
+$ git clone https://github.com/domandlj/aquelarre.git 
 ```
 2. Run the installer (only works with MAC OS, Linux and Termux.).
 ```bash
-chmod +x install.sh
-sudo ./install.sh
+$ chmod +x install.sh
+$ sudo ./install.sh
 ``` 
 
 3. And that's it. You can now run your own aquelare .re scripts like
 ```bash
-aquelarre script.re
+$ aquelarre script.re
 ```
 
 ## Syntax example.
-```ruby
+```python
 exists_worker = ./is_is_worker.py
 get_worker = ./get_worker.py
 anything = ./anything.sh

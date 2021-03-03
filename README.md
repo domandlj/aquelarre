@@ -10,22 +10,22 @@ parameters are passed as script parameters and it's body JSON payload as stdin.
 
 ## Installing.
 1. Clone the repo and go to it: 
-```zsh
+```haskell
 $ git clone https://github.com/domandlj/aquelarre.git 
 ```
 2. Run the installer (only works with MAC OS, Linux and Termux.).
-```zsh
+```haskell
 $ chmod +x install.sh
 $ sudo ./install.sh
 ``` 
 
 3. And that's it. You can now run your own aquelare .re scripts like
-```zsh
+```haskell
 $ aquelarre script.re
 ```
 
 ## Syntax example.
-```js
+```ruby
 exists_worker = ./is_is_worker.py
 get_worker = ./get_worker.py
 anything = ./anything.sh

@@ -10,17 +10,17 @@ parameters are passed as script parameters and it's body JSON payload as stdin.
 
 ## Installing.
 1. Clone the repo and go to it: 
-```ruby
+```
 git clone https://github.com/domandlj/aquelarre.git 
 ```
 2. Run the installer (only works with MAC OS, Linux and Termux.).
-```ruby
+```
 chmod +x install.sh
 sudo ./install.sh
 ``` 
 
 3. And that's it. You can now run your own aquelare .re scripts like
-```ruby
+```
 aquelarre script.re
 ```
 
@@ -41,7 +41,7 @@ get /?id&name :
     # succes.
         exists_worker => get_worker, 201 
     # failure.
-		not_exists_worker => fail, 400
+	not_exists_worker => fail, 400
 end
 
 post

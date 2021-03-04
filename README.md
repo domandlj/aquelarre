@@ -16,22 +16,22 @@ parameters are passed as script parameters and it's body JSON payload as stdin.
 
 ## Installing
 1. Clone the repo and go to it: 
-```
-git clone https://github.com/domandlj/aquelarre.git 
-cd aquelarre
+```sh
+$ git clone https://github.com/domandlj/aquelarre.git 
+$ cd aquelarre
 ```
 2. Run the installer (only works with Mac OS, Linux and Termux.).
-```
-chmod +x install.sh
-sudo ./install.sh
+```sh
+$ chmod +x install.sh
+$ sudo ./install.sh
 ``` 
 
 3. And that's it, you can now run your own aquelare .re scripts like
-```
-aquelarre script.re
+```sh
+$ aquelarre script.re
 ```
 the Aquelarre prompt will be started:
-```
+```sh
 > 🐐 Aquelarre server started http://localhost:8080
 
 ```
@@ -65,7 +65,7 @@ post
 end
 ```
 ## Implementation.
-The server is implemented with `httt.server` Python lib which isn'trecommended for production, so one of this days 
+The server is implemented with `httt.server` Python lib which isn't recommended for production, so one of this days 
 i'm going to implement it with some WSGI compatible server.
 Also there are no tests yet.
 

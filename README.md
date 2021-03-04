@@ -18,8 +18,9 @@ parameters are passed as script parameters and it's body JSON payload as stdin.
 1. Clone the repo and go to it: 
 ```
 git clone https://github.com/domandlj/aquelarre.git 
+cd aquelarre
 ```
-2. Run the installer (only works with MAC OS, Linux and Termux.).
+2. Run the installer (only works with Mac OS, Linux and Termux.).
 ```
 chmod +x install.sh
 sudo ./install.sh
@@ -29,7 +30,12 @@ sudo ./install.sh
 ```
 aquelarre script.re
 ```
-and you can now remove the github repositorie. 
+the Aquelarre prompt will be started:
+```
+> 🐐 Aquelarre server started http://localhost:8080
+
+```
+and you can now remove the github repo if you want. 
 
 4. You can run again the install script to remove Aquelarre. 
 

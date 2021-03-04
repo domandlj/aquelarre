@@ -1,5 +1,8 @@
-# Specification DSL in BNF extended.
-# [ ] and * are part of the meta language.
+# Aquelarre formal specification 
+
+## BNF
+The specification is in BNF extended, the symbols  
+[ ] and * are part of this meta language.
 
 ```html
 <code> ::= <script-declaration> <code>*

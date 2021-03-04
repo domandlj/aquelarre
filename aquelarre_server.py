@@ -19,7 +19,7 @@ class HandleHTTP(BaseHTTPRequestHandler):
             response = run_cond(self.code,cond,get_params_or_args(self.path,'args'),
                     stdin)
             # print(response)
-            if response != 'skip':
+            if response != 'false':
                 self.send_response(cond.status)
                 self.send_header("Content-type", "application/json")
                 self.end_headers()

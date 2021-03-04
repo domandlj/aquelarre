@@ -30,7 +30,7 @@ def run_cond(code: Code, cond: Cond, args: List[str],stdin=None) -> str:
     if 'true' in run_script(if_script,stdin):
         return run_script(then_script,stdin)
     else:
-        return 'skip'
+        return 'false'
 
 def get_params_or_args(path,option) -> List[str]:
     result = []

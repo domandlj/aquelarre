@@ -18,7 +18,7 @@ class HandleHTTP(BaseHTTPRequestHandler):
         for cond in fun.body:
             response = run_cond(self.code,cond,get_params_or_args(self.path,'args'),
                     stdin)
-            print(response)
+            # print(response)
             if response != 'skip':
                 self.send_response(cond.status)
                 self.send_header("Content-type", "application/json")
@@ -52,7 +52,7 @@ class HandleHTTP(BaseHTTPRequestHandler):
         
 def run_server(code: Code):
     server = HTTPServer((hostName, serverPort), partial(HandleHTTP,code))
-    print("Server started http://%s:%s" % (hostName, serverPort))
+    print(" 🐐 Aquelarre server started http://%s:%s" % (hostName, serverPort))
 
     try:
         server.serve_forever()

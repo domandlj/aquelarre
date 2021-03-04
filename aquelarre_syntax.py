@@ -137,22 +137,23 @@ def tokenize(lines:list) -> List[Union[Token, FunToken]]:
             if fun_open:
                 raise Exception('BadSyntax: script declaration inside HTTP method.')
             
-            print('script declaration => ' +line)
+            # print('script declaration => ' +line)
             tokens.append(line.replace('\n',''))
 
         if is_comment(line):
-            print("type: comment => " +line)
-        
+            # print("type: comment => " +line)
+            pass
+
         if is_fun(line):
             if fun_open:
                 raise Exception('BadSyntax: HTTP method inside HTTP mehtod.')
 
             fun_open = True
-            print('type: fun =>' + line)
+            # print('type: fun =>' + line)
             fun_tokens.append(line.replace('\n',''))
 
         if is_cond(line):
-            print('type: cond => ' + line)
+            # print('type: cond => ' + line)
             if fun_open:
                 fun_body.append(line.replace('\n',''))
 
@@ -166,7 +167,7 @@ def tokenize(lines:list) -> List[Union[Token, FunToken]]:
     if fun_open:
         raise Exception('BadSyntax: HTTP method unclosed!')
 
-    print(str(tokens))
+    # print(str(tokens))
     return tokens
 
 """ 3. Parsing"""

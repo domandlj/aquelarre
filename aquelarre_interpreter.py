@@ -24,9 +24,10 @@ def run_cond(code: Code, cond: Cond, args: List[str],stdin=None) -> str:
     scripts_table_ = scripts_table(code)
     if_script = scripts_table_[cond.if_script] + ' ' + args_
     then_script = scripts_table_[cond.then_script] + ' ' + args_ 
-    print(run_script(if_script,stdin))
+    
+    # print(run_script(if_script,stdin))
+    
     if 'true' in run_script(if_script,stdin):
-        print('paso!!!')
         return run_script(then_script,stdin)
     else:
         return 'skip'

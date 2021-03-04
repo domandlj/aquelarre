@@ -3,7 +3,7 @@ import re
 
 """ 1. Abstract Syntax Tree Types."""
 Method = str 
-methods = ['get','post','put','delete']
+methods = ['get','post','put','delete', 'patch']
 ScriptName = str 
 URL = str 
 Status = int 

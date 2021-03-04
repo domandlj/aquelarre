@@ -1,5 +1,5 @@
 # Specification DSL in BNF extended.
-
+# [ ] and * are part of the meta language.
 
 <code> ::= <script-declaration> <code>*
 		|  <comment> <code>*
@@ -15,6 +15,9 @@
 
 <status> ::= <int>
 
-<method> ::= get | post | put | delete
+<method> ::= get | post | put | delete | patch
 
-<url> ::= <string>
+<url> ::= <string> <query>*
+
+<query> ::= ? <param-name> [& <param-name>]*
+<param-name> ::= <string> 

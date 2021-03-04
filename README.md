@@ -64,6 +64,11 @@ post
 	not_exists_worker => create_worker, 201
 end
 ```
+## Implementation.
+The server is implemented with `httt.server` Python lib which isn'trecommended for production, so one of this days 
+i'm going to implement it with some WSGI compatible server.
+Also there are no tests yet.
+
 ## License
 MIT License (© 2021 Juan Salvador Domandl).
 

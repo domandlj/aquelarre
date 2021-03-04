@@ -64,6 +64,13 @@ post
 	not_exists_worker => create_worker, 201
 end
 ```
+When the client makes an HTTP request to an URL, the parameters and arguments must be in a query style: 
+ `/resource?parameter1=value1&parameter2=value2` 
+Other ways like this: 
+`/resuoruce/value1` 
+are not allowed. 
+
+
 ## Implementation.
 The server is implemented with `httt.server` Python lib which isn't recommended for production, so one of this days 
 i'm going to implement it with some WSGI compatible server.

@@ -42,6 +42,8 @@ and you can now remove the github repo if you want.
 ## Syntax example
 script.re
 ```ruby
+#!/usr/local/bin/aquelarre
+
 exists_worker = ./is_is_worker.py
 get_worker = ./get_worker.py
 anything = ./anything.sh
@@ -63,6 +65,13 @@ end
 post
 	not_exists_worker => create_worker, 201
 end
+```
+Now you can execute the script with aquelarre interpreter, like:
+`$ aquelarre script.re`
+Or running it like an script, but first you give it permissions:  
+```
+$ chmod +x script.re  
+$ ./script.re  
 ```
 When the client makes an HTTP request to an URL, the parameters and arguments must be in a query style:  
 `/resource?parameter1=value1&parameter2=value2`   

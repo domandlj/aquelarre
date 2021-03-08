@@ -14,6 +14,14 @@ than similiar software beacuse:
 parameters are passed as script parameters and it's body JSON payload as stdin.
 * Responses are in JSON format only, must be the stdout of a script.
 
+## Concept 
+Usually when developing web apps the common frameworks include everything you need, like serializers, ORM, etc. the cost  
+of this is having some extra boilerplate code and perhaps a learning curve. Also, you have to stick to the one language that 
+the framework was written.  
+With aquelarre you write a script and redirect the URLs to another scripts of any language, so you can work with a lot of different 
+libs. You decide how to serialize data and how to store it in a database, it could be just plain .txt, .cvs, .json, a relational db or  
+whatever you want.  
+
 ## Installing
 1. Clone the repo and go to it: 
 ```sh

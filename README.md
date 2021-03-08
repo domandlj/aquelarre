@@ -62,7 +62,7 @@ get /?id&name :
 	not_exists_worker => fail, 400
 end
 
-post
+post / : 
 	not_exists_worker => create_worker, 201
 end
 ```

@@ -19,8 +19,7 @@ Usually when developing web apps the common frameworks include everything you ne
 of this is having some extra boilerplate code and perhaps a learning curve. Also, you have to stick to the one language that 
 the framework was written.  
 With aquelarre you write a script and redirect the URLs to another scripts of any language, so you can work with a lot of different 
-libs. You decide how to serialize data and how to store it in a database, it could be just plain .txt, .cvs, .json, a relational db or  
-whatever you want.  
+libs. You decide how to serialize data and how to store it in a database, it could be just plain .txt, .cvs, .json, a relational db or whatever you want.  
 
 ## Installing
 1. Clone the repo and go to it: 

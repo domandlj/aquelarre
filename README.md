@@ -9,10 +9,11 @@
 Aquelarre is a DSL (with an interpreter) for making minimalistic web apps. 
 ```ruby
 #!/usr/local/bin/aquelarre
-anything = scripts/anything.sh 
+is_weekend = scripts/is_weekend.sh 
 
 get / : 
-     anything => {"hello":"world"}, 200 
+     is_weekend => {"get": "drunk"}, 200
+     not is_weekend => {"work":" bitch"}, 200
 end
 ```
 

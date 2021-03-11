@@ -1,7 +1,6 @@
 from aquelarre_syntax import *
 import subprocess
 
-
 def scripts_table(code: Code) -> dict:
     result:dict = {}
     
@@ -23,8 +22,14 @@ def run_cond(code: Code, cond: Cond, args: List[str],stdin=None) -> str:
     args_ = ' '.join(args)
     scripts_table_ = scripts_table(code)
     if_script = scripts_table_[cond.if_script] + ' ' + args_
-    then_script = scripts_table_[cond.then_script] + ' ' + args_ 
     
+    response = ''
+    if cond.json_payload != None:
+        response = cond.json_payload
+    else:
+        then_script = scripts_table_[cond.then_script] + ' ' + args_
+        response = run_script(then_script,stdin)
+
     # print(run_script(if_script,stdin))
     if_script_ouput = run_script(if_script,stdin)
     
@@ -32,10 +37,10 @@ def run_cond(code: Code, cond: Cond, args: List[str],stdin=None) -> str:
         if 'true' in if_script_ouput: 
             return 'false'
         else:
-            return run_script(then_script,stdin)
+            return response
     else:
         if 'true' in if_script_ouput:
-            return run_script(then_script,stdin)
+            return response
         else:
             return 'false'
 

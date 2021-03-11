@@ -1,5 +1,6 @@
 from typing import Any, List, Union
 import re
+import json
 
 """ 1. Abstract Syntax Tree Types."""
 Method = str 
@@ -33,13 +34,15 @@ class Cond:
     def __init__(self,
             neg: bool,
             if_script: ScriptName, 
-            then_script: ScriptName, 
-            status: Status):
+            status: Status,
+            then_script: ScriptName = None,
+            json_payload: str = None):
 
         self.neg = neg
         self.if_script = if_script
         self.then_script = then_script
         self.status = status
+        self.json_payload = json_payload
 
 class Fun:
     def __init__(self, 
@@ -188,12 +191,23 @@ def parse_cond(token: Token) -> Cond:
     
     tokens = re.split('=>|,',token_clean)
 
-        
-    return Cond(
-            neg = neg_active ,
-            if_script = tokens[0].replace(' ', ''), 
-            then_script = tokens[1].replace(' ', ''),
-            status = int(tokens[2]))
+    if '{' in token or '[' in token:
+        try:
+            json.loads(tokens[1])
+            return Cond(
+                    neg = neg_active,
+                    if_script = tokens[0].replace(' ', ''),
+                    status = int(tokens[2]),
+                    json_payload = tokens[1])
+
+        except ValueError:
+            raise Exception('BadSyntax: bad JSON!')
+    else:
+        return Cond(
+                neg = neg_active ,
+                if_script = tokens[0].replace(' ', ''), 
+                then_script = tokens[1].replace(' ', ''),
+                status = int(tokens[2]))
 
 
 

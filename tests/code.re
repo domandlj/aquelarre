@@ -14,7 +14,7 @@ end
 
 get / :
     # succes.
-	not cond1 => home, 200 
+	not cond1 => {"x":"d"}, 200 
     # failure.
 end
 

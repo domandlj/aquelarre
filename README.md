@@ -13,7 +13,7 @@ is_weekend = scripts/is_weekend.sh
 
 get / : 
      is_weekend => {"get": "drunk"}, 200
-     not is_weekend => {"work":" bitch"}, 200
+     not is_weekend => {"work":" bitch"}, 400
 end
 ```
 

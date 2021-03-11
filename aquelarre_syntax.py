@@ -30,11 +30,13 @@ class ScriptDeclaration:
         self.script = script
 
 class Cond:
-    def __init__(self, 
+    def __init__(self,
+            neg: bool,
             if_script: ScriptName, 
             then_script: ScriptName, 
             status: Status):
 
+        self.neg = neg
         self.if_script = if_script
         self.then_script = then_script
         self.status = status
@@ -156,7 +158,7 @@ def tokenize(lines:list) -> List[Union[Token, FunToken]]:
             # print('type: cond => ' + line)
             if fun_open:
                 fun_body.append(line.replace('\n',''))
-
+                        
         if is_end(line):
             fun_open = False
             fun_tokens.append(fun_body)
@@ -167,7 +169,7 @@ def tokenize(lines:list) -> List[Union[Token, FunToken]]:
     if fun_open:
         raise Exception('BadSyntax: HTTP method unclosed!')
 
-    # print(str(tokens))
+    #print(str(tokens))
     return tokens
 
 """ 3. Parsing"""
@@ -177,10 +179,20 @@ def parse_script_declaration(token: Token) -> ScriptDeclaration:
 
 
 def parse_cond(token: Token) -> Cond:
-    tokens = re.split('=>|,',token)
+    token_clean = token.replace('\t','')
+    neg_active = False
+
+    if 'not' in token:
+        neg_active = True
+        token_clean = token_clean.replace('not','', 1)    
+    
+    tokens = re.split('=>|,',token_clean)
+
+        
     return Cond(
-            if_script = tokens[0].replace(' ', '').replace('\t',''), 
-            then_script = tokens[1].replace(' ', '').replace('\t',''),
+            neg = neg_active ,
+            if_script = tokens[0].replace(' ', ''), 
+            then_script = tokens[1].replace(' ', ''),
             status = int(tokens[2]))
 
 

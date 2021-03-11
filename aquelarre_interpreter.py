@@ -26,11 +26,19 @@ def run_cond(code: Code, cond: Cond, args: List[str],stdin=None) -> str:
     then_script = scripts_table_[cond.then_script] + ' ' + args_ 
     
     # print(run_script(if_script,stdin))
+    if_script_ouput = run_script(if_script,stdin)
     
-    if 'true' in run_script(if_script,stdin):
-        return run_script(then_script,stdin)
+    if cond.neg:
+        if 'true' in if_script_ouput: 
+            return 'false'
+        else:
+            return run_script(then_script,stdin)
     else:
-        return 'false'
+        if 'true' in if_script_ouput:
+            return run_script(then_script,stdin)
+        else:
+            return 'false'
+
 
 def get_params_or_args(path,option) -> List[str]:
     result = []

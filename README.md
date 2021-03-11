@@ -51,12 +51,11 @@ script.re
 ```ruby
 #!/usr/local/bin/aquelarre
 
-exists_worker = ./is_is_worker.py
-get_worker = ./get_worker.py
-anything = ./anything.sh
-not_exists_worker = ./not_exists_worker.py
-fail = ./fail.py
-create_worker = ./create_worker.py
+exists_worker = scripts/exists_worker.py
+get_worker = scripts/get_worker.py
+anything = scripts/anything.sh
+fail = scripts/fail.py
+create_worker = scripts/create_worker.py
 
 get / : 
      anything => home, 200 
@@ -66,11 +65,11 @@ get /?id&name :
     # succes.
         exists_worker => get_worker, 201 
     # failure.
-	not_exists_worker => fail, 400
+	not exists_worker => fail, 400
 end
 
 post / : 
-	not_exists_worker => create_worker, 201
+	not exists_worker => create_worker, 201
 end
 ```
 Now you can execute the script with aquelarre interpreter, like:

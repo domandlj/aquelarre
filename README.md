@@ -9,6 +9,8 @@
 Aquelarre is a DSL (with an interpreter) for making minimalistic web apps. 
 ```ruby
 #!/usr/local/bin/aquelarre
+anything = scripts/anything.sh 
+
 get / : 
      anything => {"hello":"world"}, 200 
 end

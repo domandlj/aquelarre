@@ -14,7 +14,7 @@ The specification is in BNF extended, the symbols
 
 <comment> ::= #<string>
 
-<cond> ::= <script-name> => <script-name> , <status>	
+<cond> ::= not* <script-name> => <script-name> , <status>	
 <fun> ::= <method> <url>: <comment>* <cond>* <comment>* end
 
 <status> ::= <int>

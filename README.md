@@ -6,7 +6,15 @@
 
 # Aquelarre
 
-Aquelarre is a DSL (with an interpreter) for making minimalistic web apps. It's more minimalistic 
+Aquelarre is a DSL (with an interpreter) for making minimalistic web apps. 
+```ruby
+#!/usr/local/bin/aquelarre
+get / : 
+     anything => {"hello":"world"}, 200 
+end
+```
+
+It's more minimalistic 
 than similiar software beacuse:
 
 * Only implements: GET, POST, PUT, PATCH and DELETE HTTP methods.

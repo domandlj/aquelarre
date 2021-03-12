@@ -47,6 +47,10 @@ $ sudo ./install.sh
 ```sh
 $ aquelarre script.re
 ```
+or  
+```sh
+$ ./script.re
+```
 the Aquelarre prompt will be started:
 ```sh
 > 🐐 Aquelarre server started http://localhost:8080

@@ -65,7 +65,6 @@ script.re
 exists_worker = scripts/exists_worker.py
 get_worker = scripts/get_worker.py
 anything = scripts/anything.sh
-fail = scripts/fail.py
 create_worker = scripts/create_worker.py
 
 get / : 
@@ -76,7 +75,7 @@ get /?id&name :
     # succes.
         exists_worker => get_worker, 201 
     # failure.
-	not exists_worker => fail, 400
+	not exists_worker => {"error msg:", "worker does not exist"}, 400
 end
 
 post / : 

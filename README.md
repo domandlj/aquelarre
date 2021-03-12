@@ -6,7 +6,7 @@
 
 # Aquelarre
 
-Aquelarre is a DSL (with an interpreter) for making minimalistic web apps. 
+Aquelarre is a DSL for making minimalistic web apps using scripts. 
 ```ruby
 #!/usr/local/bin/aquelarre
 is_weekend = scripts/is_weekend.sh 

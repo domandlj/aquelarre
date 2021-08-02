@@ -1,4 +1,3 @@
-# Aquelarre
 ![aquelarre](aquelarre.png "icon")
 [![Generic badge](https://img.shields.io/badge/Progress-Early%20Development-Orange.svg)](https://shields.io/)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
